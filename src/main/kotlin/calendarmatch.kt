@@ -64,7 +64,7 @@ fun flattenedCalendar(calendar : List<List<Int>>) : List<List<Int>>{
     val flattened = mutableListOf(listOf(calendar[0][0], calendar[0][1]))
     for (i in 1 until calendar.size){
         val currentMeeting = calendar[i]
-        val previousMeeting = flattened[flattened.size - 1]
+        val previousMeeting = flattened[flattened.size - 1] // last element of the list
 
         val(currentStart, currentEnd) = currentMeeting
         val(previousStart, previousEnd) = previousMeeting
