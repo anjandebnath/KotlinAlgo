@@ -24,7 +24,8 @@ fun updateCalendar(calendar: List<List<String>>, dailyBounds : List<String>) : L
 
     // Collection (List,hashtable) transformation
     return updatedCalendar.map {
-        meeting -> meeting.map { time -> timeToMinutes(time) }
+        meeting -> meeting.map {
+            time -> timeToMinutes(time) }
     }
 
 }

@@ -16,6 +16,11 @@ def apartmentHunting(blocks, reqs):
     # min distances from all the blocks is a map of the requirements, where for each requirement
     # we get all of the minimum distances of that requirement from every single block
 
+    # def a_name(x):
+    #     return x+x
+
+    # lambda x: x+x
+
     # Lambda functions can be used along with built-in functions like filter(), map() and reduce().
     # map(fun, iter)
     # map() function returns a map object (which is an iterator) of the results after applying the given function to each item of a given iterable
