@@ -38,7 +38,7 @@ fun getLocalMinIdx(array: List<Int>): List<Int>{
 fun expandFromLocalMinIdx(localMinIdx: Int, scores: List<Int>, rewards:MutableList<Int>){
 
     // expand to the left until the next peak value
-    // if the previous value of the local min is getter
+    // if the previous value of the local min is greater
     // then calculate the max value of the 2 rewards and which one is grater that will be the value.
     var leftIdx = localMinIdx -1
     while (leftIdx >= 0 && scores[leftIdx] > scores[leftIdx+1]){
