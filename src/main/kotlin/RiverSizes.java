@@ -47,6 +47,14 @@ public class RiverSizes {
         List<Integer> sizes = new ArrayList<Integer>();
         // to keep track of the already visited nodes
         // declare an array of same width[row] and height[column]
+
+        // In the latest version of JAVA this is how you do it:
+        //matrix.length //is the first dimension
+        //matrix[0].length //is the second dimension
+        /**
+         *  there's no real two-dimensional array in Java. Each "first level"
+         *  array contains another array. Each of these arrays can be of different sizes.
+         */
         boolean[][] visited = new boolean[matrix.length][matrix[0].length];
         for (int i=0; i< matrix.length; i++){
             for(int j=0; j<matrix[0].length; j++){
