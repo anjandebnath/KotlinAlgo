@@ -37,7 +37,7 @@ public class CycleCount {
         currentlyInStock[node] = true;
 
         boolean containsCycle = false;
-        int[]neighbors = edges[node];
+        int[]neighbors = edges[node]; // [node 0's edges are 1 and 3] [node 1's edges are 2,3 and 4]
         for (int neighbor: neighbors){
 
             if(!visited[neighbor]){
