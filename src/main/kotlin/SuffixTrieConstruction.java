@@ -2,7 +2,7 @@
 // bunch of hashtable will be used, where each hash table key points to another hashtable
 // every node in the suffix trie will be pointed to another hashtable
 
-// start from the root node and that root node will be mapped to an empty hashtable
+// start from the root node and that root node will be mapped to an empty hashmap
 
 // traverse the first node (b) from suffix trie and check if the node is contained
 // in the hash table that the root node maps to. If not then add that node in the hash table.
@@ -22,6 +22,7 @@ public class SuffixTrieConstruction {
     static class TrieNode{
         // HashMap allows one null key and multiple null values whereas Hashtable doesn’t allow any null key or value.
         Map<Character, TrieNode> children = new HashMap<Character, TrieNode>();
+
 
         public String toString(){
             return this.children.toString() ;
@@ -43,6 +44,9 @@ public class SuffixTrieConstruction {
             }
         }
 
+        // in this trie we need to create different configuration
+        // of the string that we need to explore
+        // So here 2 for loop had been used
         public void insertSubstringStartingAt(int i, String str){
             TrieNode node = root;
             for (int j=i; j<str.length(); j++){
