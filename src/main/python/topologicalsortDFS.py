@@ -3,6 +3,10 @@
 # Again task 3 can be done only after task 1 and 2 completion.
 # so the tasks are directed and we will deal with directed graph
 
+# The topological sort algorithm takes a directed graph and returns an array of the nodes
+# where each node appears before all the nodes it points to.
+# https://www.interviewcake.com/concept/java/topological-sort
+
 # at first define a class for graph data structure
 
 def topologicalSort(jobs, deps):
