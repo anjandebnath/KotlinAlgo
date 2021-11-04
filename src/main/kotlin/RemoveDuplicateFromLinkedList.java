@@ -53,7 +53,7 @@ public class RemoveDuplicateFromLinkedList {
 
         // linked list formation
         for(int value: values){
-            current.next = new LinkedList(value);
+            current.next = new LinkedList(value); // it will simultaneously update the ll object
             current = current.next;
         }
 
@@ -84,6 +84,7 @@ public class RemoveDuplicateFromLinkedList {
 
         /**
          * to form linkedlist arraylist get converted to linkedList
+         * Object reference has been passed
          */
         LinkedList linkedList = addMany(head, new ArrayList<>(Arrays.asList(1,3,4,4,4,5,6,6)));
         /**
