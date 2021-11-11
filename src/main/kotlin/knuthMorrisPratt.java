@@ -43,13 +43,15 @@ public class knuthMorrisPratt {
     public static boolean doesMatch(String string, String subString, int[] pattern){
         int i=0; // initiate from string
         int j=0; // initiate from subString
+
         // substring is always less than largeString
         // to verify the while loop until i-j is less than the large string length
 
-        /** if subString.length() not used in while loop then below exception occur
-         * java.lang.StringIndexOutOfBoundsException: String index out of range: 21
-         * 	at java.base/java.lang.StringLatin1.charAt(StringLatin1.java:48)
-         * 	at java.base/java.lang.String.charAt(String.java:711)
+        /**
+         *
+         * if the large string length is 21 and substring length is 3 then
+         * to check the pattern in large string , the length upto (21-3 = 18 + 1 =) 19
+         * is enough.
          *
          */
         while(i+subString.length() - j <= string.length()){
